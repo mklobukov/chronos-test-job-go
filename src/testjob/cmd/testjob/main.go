@@ -1,3 +1,7 @@
+//Test job for Chronos Go SDK
+//Provide path to config.json as a command line argument
+//Initializes counter to the arguments from the job descriptor
+//and repeatedly updates provided job's status with the incremented counter 
 package main
 
 import (
@@ -13,7 +17,7 @@ func main() {
   var config chronossdk.Config
   if (len(os.Args) < 2) {
     fmt.Println("Provide path to config.json as an argument")
-    return 
+    return
   }
   pathToConfig := os.Args[1]
   configFile, err := os.Open(pathToConfig)
