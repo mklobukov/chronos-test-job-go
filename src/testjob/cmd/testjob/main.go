@@ -11,6 +11,10 @@ import (
 
 func main() {
   var config chronossdk.Config
+  if (len(os.Args) < 2) {
+    fmt.Println("Provide path to config.json as an argument")
+    return 
+  }
   pathToConfig := os.Args[1]
   configFile, err := os.Open(pathToConfig)
   defer configFile.Close()
