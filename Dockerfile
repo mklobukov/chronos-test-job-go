@@ -1,4 +1,4 @@
-FROM go:alpine
+FROM alpine
 
 COPY src/testjob/cmd/testjob/testjob /usr/local/bin/
 
