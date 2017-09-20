@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "marktest",
+  "schedule": "0 * * * *",
+  "repeat": 0,
+  "callback": "http://localhost:3007/jobcallback/uno",
+  "check_in_threshold": 240,
+  "arguments": "{\"counterInit\": 200}"
+}
