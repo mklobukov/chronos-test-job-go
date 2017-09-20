@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM go:alpine
 
 COPY src/testjob/cmd/testjob/testjob /usr/local/bin/
 
