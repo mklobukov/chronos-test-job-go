@@ -1,7 +1,5 @@
 FROM node:8-alpine
 
-COPY main.js index.js
-COPY package.json package.json
-RUN npm i
+COPY src/testjob/cmd/testjob/testjob /usr/local/bin/
 
-CMD [ "node", "index.js" ]
+CMD ["usr/local/bin/testjob", "config.json"]
